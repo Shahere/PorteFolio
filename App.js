@@ -7,7 +7,6 @@ import {
   TouchableOpacity,
   Platform,
 } from 'react-native';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import navstyle from './styles/navigationBar';
 
@@ -92,7 +91,7 @@ export default function App() {
   /*{showContent()}*/
 
   return (
-    <SafeAreaView style={{flex: 1,backgroundColor:'#CCC' , paddingTop: Platform.OS == "android" ? 50: 0}}>
+    <SafeAreaView style={{flex: 1,backgroundColor:'#CCC'}}>
       {navigationBar()}
       <View style={{width:'100%', height: '100%'}}>
         {showContent()}
