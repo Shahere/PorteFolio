@@ -5,7 +5,9 @@ import {
   Text,
   View,
   TouchableOpacity,
+  Platform,
 } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import navstyle from './styles/navigationBar';
 
@@ -19,10 +21,10 @@ import Contact from './src/Contact.js';
 import { useState } from 'react';
 
 const page = {
-	Menu: "menu",
-	CV: "cv",
-	Project: "project",
-	Contact: "contact"
+  Menu: "menu",
+  CV: "cv",
+  Project: "project",
+  Contact: "contact"
 }
 
 export default function App() {
@@ -36,22 +38,22 @@ export default function App() {
   function navigationBar() {
     return (
       <View style={navstyle.container}>
-        <TouchableOpacity style={navstyle.button} onPress={() => {changePage(page.Menu)}}>
+        <TouchableOpacity style={navstyle.button} onPress={() => { changePage(page.Menu) }}>
           <View style={navstyle.svg}>
             <Home />
           </View>
         </TouchableOpacity>
-        <TouchableOpacity style={navstyle.button} onPress={() => {changePage(page.CV)}}>
+        <TouchableOpacity style={navstyle.button} onPress={() => { changePage(page.CV) }}>
           <View style={navstyle.svg}>
             <Sheet />
           </View>
         </TouchableOpacity>
-        <TouchableOpacity style={navstyle.button} onPress={() => {changePage(page.Project)}}>
+        <TouchableOpacity style={navstyle.button} onPress={() => { changePage(page.Project) }}>
           <View style={navstyle.svg}>
             <Home />
           </View>
         </TouchableOpacity>
-        <TouchableOpacity style={navstyle.button} onPress={() => {changePage(page.Contact)}}>
+        <TouchableOpacity style={navstyle.button} onPress={() => { changePage(page.Contact) }}>
           <View style={navstyle.svg}>
             <Home />
           </View>
@@ -63,7 +65,7 @@ export default function App() {
   function showContent() {
     switch (actualPage) {
       case "menu":
-        return(
+        return (
           <Menu />
         );
         break;
@@ -87,12 +89,13 @@ export default function App() {
         break;
     }
   }
+  /*{showContent()}*/
 
   return (
-    <SafeAreaView>
-      <View style={{ width: '100%', height: '100%', }}>
+    <SafeAreaView style={{flex: 1,backgroundColor:'#CCC' , paddingTop: Platform.OS == "android" ? 50: 0}}>
+      {navigationBar()}
+      <View style={{width:'100%', height: '100%'}}>
         {showContent()}
-        {navigationBar()}
       </View>
     </SafeAreaView>
   );
