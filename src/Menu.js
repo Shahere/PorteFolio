@@ -8,12 +8,10 @@ import {
     StatusBar,
     Platform,
     TouchableHighlight,
-    TouchableOpacity
+    TouchableOpacity,
+    ScrollView,
 } from 'react-native';
 import style from '../styles/stylesMenu.js'
-import navstyle from '../styles/navigationBar.js'
-
-import Home from '../assets/svg/Home.js';
 
 const initialState = {
 
@@ -29,9 +27,40 @@ export default class Menu extends React.Component {
 
     render() {
 
+        function title1(desc) {
+            return (
+                <View>
+                    <Text style={style.title1}>{desc}</Text>
+                </View>
+            );
+        }
+
+        function portrait() {
+            return (
+                <View style={style.centered}>
+                    <View style={style.photoContainer}>
+                        <View style={style.photo}>
+
+                        </View>
+                        <View style={style.centered}>
+                            <Text style={style.photoText}>Photo datant de 2023</Text>
+                        </View>
+                    </View>
+                </View>
+            );
+        }
+
         return (
-            <View style={style.main}>
-                <Text>Menu</Text>
+            <View style={{ flex: 1 }}>
+                <ScrollView contentContainerStyle={{ flexGrow: 1}}>
+                    <View style={style.topView}>
+                        <Text style={style.mainText}>MENU</Text>
+                    </View>
+                    {title1("Portrait")}
+                    {portrait()}
+                    {title1("Desption")}
+                    {portrait()}
+                </ScrollView>
             </View>
         );
     }

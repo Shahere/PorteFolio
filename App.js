@@ -10,8 +10,10 @@ import {
 
 import navstyle from './styles/navigationBar';
 
-import Home from './assets/svg/Home';
-import Sheet from './assets/svg/Sheet';
+import HomeIcon from './assets/svg/Home';
+import SheetIcon from './assets/svg/Sheet';
+import ContactIcon from './assets/svg/Contact';
+import ProjectIcon from './assets/svg/Project';
 
 import Menu from './src/Menu.js';
 import CV from './src/CV.js';
@@ -39,22 +41,22 @@ export default function App() {
       <View style={navstyle.container}>
         <TouchableOpacity style={navstyle.button} onPress={() => { changePage(page.Menu) }}>
           <View style={navstyle.svg}>
-            <Home />
+            <HomeIcon />
           </View>
         </TouchableOpacity>
         <TouchableOpacity style={navstyle.button} onPress={() => { changePage(page.CV) }}>
           <View style={navstyle.svg}>
-            <Sheet />
+            <SheetIcon />
           </View>
         </TouchableOpacity>
         <TouchableOpacity style={navstyle.button} onPress={() => { changePage(page.Project) }}>
           <View style={navstyle.svg}>
-            <Home />
+            <ProjectIcon />
           </View>
         </TouchableOpacity>
         <TouchableOpacity style={navstyle.button} onPress={() => { changePage(page.Contact) }}>
           <View style={navstyle.svg}>
-            <Home />
+            <ContactIcon />
           </View>
         </TouchableOpacity>
       </View>
@@ -91,7 +93,7 @@ export default function App() {
   /*{showContent()}*/
 
   return (
-    <SafeAreaView style={{flex: 1,backgroundColor:'#CCC'}}>
+    <SafeAreaView style={{flex: 1}}>
       {navigationBar()}
       <View style={{width:'100%', height: '100%'}}>
         {showContent()}
