@@ -7,6 +7,7 @@ import {
   Pressable,
   StatusBar,
   Platform,
+  ScrollView
 } from 'react-native';
 
 const initialState = {
@@ -24,9 +25,25 @@ export default class Project extends React.Component {
   render() {
 
     return (
-      <View>
-        <Text>Project</Text>
-      </View>
+      <ScrollView style={{backgroundColor: 'red'}} contentContainerStyle={{}}>
+        <Text style={{padding: 30}}>Project</Text>
+        <Text style={{padding: 30}}>Project</Text>
+        <Text style={{padding: 30}}>Project</Text>
+        <Text style={{padding: 30}}>Project</Text>
+        <Text style={{padding: 30}}>Project</Text>
+        <Text style={{padding: 30}}>Project</Text>
+        <Text style={{padding: 30}}>Project</Text>
+        <Text style={{padding: 30}}>Project</Text>
+        <Text style={{padding: 30}}>Project</Text>
+        <Text style={{padding: 30}}>Project</Text>
+        <Text style={{padding: 30}}>Project</Text>
+        <Text style={{padding: 30}}>Project</Text>
+        <Text style={{padding: 30}}>Project</Text>
+        <Text style={{padding: 30}}>Project</Text>
+        <Text style={{padding: 30}}>Project</Text>
+        <Text style={{padding: 30}}>Project</Text>
+        <Text style={{padding: 30}}>Project</Text>
+      </ScrollView>
     );
   }
 }
