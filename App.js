@@ -6,6 +6,7 @@ import {
   View,
   TouchableOpacity,
   Platform,
+  ScrollView,
 } from 'react-native';
 
 import navstyle from './styles/navigationBar';
@@ -20,6 +21,8 @@ import CV from './src/CV.js';
 import Project from './src/Project.js';
 import Contact from './src/Contact.js';
 import { useState } from 'react';
+import stylesMenu from './styles/stylesMenu';
+import styleHeader from './styles/header.js'
 
 const page = {
   Menu: "menu",
@@ -27,6 +30,8 @@ const page = {
   Project: "project",
   Contact: "contact"
 }
+
+// #ffa86a
 
 export default function App() {
 
@@ -63,6 +68,22 @@ export default function App() {
     );
   }
 
+  function header() {
+    return (
+      <View style={styleHeader.main}>
+
+      </View>
+    )
+  }
+
+  function content() {
+    return (
+      <View style={[stylesMenu.main]}>
+          {showContent()}
+      </View>
+    );
+  }
+
   function showContent() {
     switch (actualPage) {
       case "menu":
@@ -90,15 +111,13 @@ export default function App() {
         break;
     }
   }
-  /*{showContent()}*/
 
   return (
-    <SafeAreaView style={{flex: 1}}>
-      {navigationBar()}
-      <View style={{width:'100%', height: '100%'}}>
-        {showContent()}
-      </View>
-    </SafeAreaView>
+    <View style={stylesMenu.main}>
+      {header()}
+      {content()}
+      {/*navigationBar()*/}
+    </View>
   );
 
 }
