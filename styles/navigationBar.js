@@ -20,6 +20,7 @@ export default stylenav = StyleSheet.create({
         overflow :'visible',
 
         display: 'flex',
+        flex: 1,
         flexDirection :'row',
         alignItems: 'center',
         justifyContent: 'space-evenly'

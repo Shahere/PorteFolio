@@ -18,40 +18,22 @@ export default style = StyleSheet.create({
       width: '100%',
       height: '100%',
    },
-   topView: {
-      //position: 'absolute',
-      top: 0,
-      left: 0,
-   },
-   mainText: {
-      color: '#001c84',
-      padding: 10,
-      fontSize: 40,
-      fontWeight: '600',
-      marginLeft: 0,
-   },
-
    title1: {
       color: '#000',
-      padding: 10,
       paddingBottom: 0,
       fontSize: 20,
       fontWeight: '600',
-      marginLeft: 20,
    },
+   scrollView: {
+      backgroundColor: 'transparent', 
+      marginTop: '20%'
+   },
+   mainTitle: {
+      marginTop: '5%'
+   },
+   mainImage: {
+      width:'100%',
+      aspectRatio: 2/3
+   }
 
-   photoContainer: {
-      backgroundColor: '#EEE',
-      width: '90%',
-      height: '85%'
-   },
-   photo: {
-      backgroundColor: '#CCC',
-      width: '100%',
-      height: '95%'
-   },
-   photoText: {
-      textAlign: 'center',
-      fontStyle: 'italic'
-   },
 });
