@@ -33,7 +33,10 @@ export default style = StyleSheet.create({
    },
    mainImage: {
       width:'100%',
-      aspectRatio: 2/3
+      
+   },
+   social: {
+      
    }
 
 });
