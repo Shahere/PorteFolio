@@ -20,6 +20,7 @@ import CV from '../assets/svg/CV.js'
 import Linkedin from '../assets/svg/Linkedin.js'
 
 // #ffa86a
+// comp #c1ff6a
 
 const initialState = {
 
@@ -78,6 +79,20 @@ export default class Menu extends React.Component {
             );
         }
 
+        function presentation() {
+            return (
+                <View style={style.presentation}>
+                    <View style={style.introView}>
+                        <Text style={style.introduceText}>Let me introduce myself</Text>
+                        <Text style={style.aboutText}>About Me</Text>
+                    </View>
+                    <View style={style.contentView}>
+                        <Text style={style.contentText}>Hello ! My name is Savinien ! I have a strong passion for developpement and system administration.</Text>
+                    </View>
+                </View>
+            );
+        }
+
         return (
             <ScrollView style={style.scrollView} contentContainerStyle={{}}>
                 <View style={[style.centered, style.mainTitle]}>
@@ -90,6 +105,7 @@ export default class Menu extends React.Component {
                     resizeMode='contain'
                 />
                 {social()}
+                {presentation()}
             </ScrollView>
         );
     }

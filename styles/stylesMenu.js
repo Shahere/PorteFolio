@@ -17,6 +17,7 @@ export default style = StyleSheet.create({
       left: 0,
       width: '100%',
       height: '100%',
+      fontFamily: 'open-sans'
    },
    title1: {
       color: '#000',
@@ -25,15 +26,15 @@ export default style = StyleSheet.create({
       fontWeight: '600',
    },
    scrollView: {
-      backgroundColor: 'transparent', 
+      backgroundColor: 'transparent',
       marginTop: '20%'
    },
    mainTitle: {
       marginTop: '5%'
    },
    mainImage: {
-      width:'100%',
-      
+      width: '100%',
+
    },
    social: {
       display: 'flex',
@@ -49,7 +50,30 @@ export default style = StyleSheet.create({
       borderRadius: 100,
       backgroundColor: '#ffa86a',
       marginLeft: 10,
-      marginRight:10
-    },
+      marginRight: 10
+   },
 
+
+   presentation: {
+     marginTop: 30 
+   },
+   introView: {
+      alignItems: 'center'
+   },
+   introduceText: {
+
+   },
+   aboutText: {
+      color: '#ffa86a',
+      fontSize: 30,
+      fontWeight: '800',
+   },
+   contentView: {
+      marginLeft: 20,
+      marginRight: 20,
+      marginTop: 10
+   },
+   contentText: {
+      textAlign: 'justify'
+   }
 });
