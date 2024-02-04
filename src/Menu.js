@@ -11,6 +11,7 @@ import {
     TouchableOpacity,
     ScrollView,
     Image,
+    Linking
 } from 'react-native';
 import style from '../styles/stylesMenu.js'
 
@@ -23,16 +24,23 @@ import Linkedin from '../assets/svg/Linkedin.js'
 // comp #c1ff6a
 
 const initialState = {
-
+    github: "https://github.com/Shahere",
+    website: "https://savinienbarbotaud.fr",
+    linkedin: "https://www.linkedin.com/in/savinienbarbotaud/",
+    CV: "https://savinienbarbotaud.fr/document/CV_Savinien_Barbotaud.pdf",
 };
 
 export default class Menu extends React.Component {
     constructor(props) {
         super(props);
-
+        this.state = initialState;
     }
 
     componentDidMount() { }
+
+    openurl(url) {
+        Linking.openURL(url).catch(err => console.error("Couldn't load page", err));
+    }
 
     render() {
 
@@ -44,32 +52,32 @@ export default class Menu extends React.Component {
             );
         }
 
-        function social() {
+        function social(ctx) {
             return (
                 <View style={style.social}>
                     <TouchableOpacity
-                        onPress={() => { console.log('feo') }}
+                        onPress={() => { ctx.openurl(ctx.state.github) }}
                         style={style.roundButton1}>
                         <View style={{ width: '100%', height: '100%' }}>
                             <Github />
                         </View>
                     </TouchableOpacity>
                     <TouchableOpacity
-                        onPress={() => { console.log('feo') }}
+                        onPress={() => { ctx.openurl(ctx.state.website) }}
                         style={style.roundButton1}>
                         <View style={{ width: '100%', height: '100%' }}>
                             <Website />
                         </View>
                     </TouchableOpacity>
                     <TouchableOpacity
-                        onPress={() => { console.log('feo') }}
+                        onPress={() => { ctx.openurl(ctx.state.CV)  }}
                         style={style.roundButton1}>
                         <View style={{ width: '100%', height: '100%' }}>
                             <CV />
                         </View>
                     </TouchableOpacity>
                     <TouchableOpacity
-                        onPress={() => { console.log('feo') }}
+                        onPress={() => { ctx.openurl(ctx.state.linkedin) }}
                         style={style.roundButton1}>
                         <View style={{ width: '100%', height: '100%' }}>
                             <Linkedin />
@@ -104,7 +112,7 @@ export default class Menu extends React.Component {
                     source={require('../assets/hand_computer.png')}
                     resizeMode='contain'
                 />
-                {social()}
+                {social(this)}
                 {presentation()}
             </ScrollView>
         );
