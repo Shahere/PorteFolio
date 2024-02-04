@@ -74,9 +74,11 @@ export default function App() {
     return (
       <View style={styleHeader.main}>
         <View style={styleHeader.insideHeader}>
-          <View style={styleHeader.round}/>
+          <View style={styleHeader.round} />
           <Text style={styleHeader.mainText}>Savinien</Text>
-          <TouchableOpacity style={styleHeader.button} onPress={() => { console.log("fefe") }}>
+          <TouchableOpacity
+            style={styleHeader.button}
+            onPress={() => { console.log("test") }}>
             <View style={styleHeader.svg}>
               <MenuIcon />
             </View>

@@ -96,6 +96,7 @@ export default class Menu extends React.Component {
                     </View>
                     <View style={style.contentView}>
                         <Text style={style.contentText}>Hello ! My name is Savinien ! I have a strong passion for developpement and system administration.</Text>
+                        <Text style={style.contentText}>Check my formation, projects and profesional experience to know more about me.</Text>
                     </View>
                 </View>
             );

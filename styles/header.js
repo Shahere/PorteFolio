@@ -38,12 +38,13 @@ export default style = StyleSheet.create({
         marginRight: 10
     },
     button: {
-        elevation: 11,
-        zIndex: 11,
+        elevation: 50,
+        zIndex: 50,
     },
     svg: {
         height: '50%',
-        aspectRatio: 1,
+        width: '100%',
+        aspectRatio: 1
     },
     mainText: {
         color: '#ffa86a',
