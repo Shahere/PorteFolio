@@ -15,6 +15,9 @@ import {
 import style from '../styles/stylesMenu.js'
 
 import Github from '../assets/svg/GitHub'
+import Website from '../assets/svg/Website.js';
+import CV from '../assets/svg/CV.js'
+import Linkedin from '../assets/svg/Linkedin.js'
 
 // #ffa86a
 
@@ -41,7 +44,38 @@ export default class Menu extends React.Component {
         }
 
         function social() {
-
+            return (
+                <View style={style.social}>
+                    <TouchableOpacity
+                        onPress={() => { console.log('feo') }}
+                        style={style.roundButton1}>
+                        <View style={{ width: '100%', height: '100%' }}>
+                            <Github />
+                        </View>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        onPress={() => { console.log('feo') }}
+                        style={style.roundButton1}>
+                        <View style={{ width: '100%', height: '100%' }}>
+                            <Website />
+                        </View>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        onPress={() => { console.log('feo') }}
+                        style={style.roundButton1}>
+                        <View style={{ width: '100%', height: '100%' }}>
+                            <CV />
+                        </View>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        onPress={() => { console.log('feo') }}
+                        style={style.roundButton1}>
+                        <View style={{ width: '100%', height: '100%' }}>
+                            <Linkedin />
+                        </View>
+                    </TouchableOpacity>
+                </View>
+            );
         }
 
         return (
@@ -55,15 +89,7 @@ export default class Menu extends React.Component {
                     source={require('../assets/hand_computer.png')}
                     resizeMode='contain'
                 />
-                <View style={style.social}>
-                    <TouchableOpacity
-                        onPress={() => { console.log('feo') }}
-                        style={style.roundButton1}>
-                        <View style={{width:'100%', height:'100%'}}>
-                            <Github/>
-                        </View>
-                    </TouchableOpacity>
-                </View>
+                {social()}
             </ScrollView>
         );
     }

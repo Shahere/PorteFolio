@@ -35,6 +35,11 @@ export default style = StyleSheet.create({
       width:'100%',
       
    },
+   social: {
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'center',
+   },
    roundButton1: {
       width: 50,
       height: 50,
@@ -43,6 +48,8 @@ export default style = StyleSheet.create({
       padding: 10,
       borderRadius: 100,
       backgroundColor: '#ffa86a',
+      marginLeft: 10,
+      marginRight:10
     },
 
 });
