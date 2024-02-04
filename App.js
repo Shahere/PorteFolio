@@ -15,6 +15,7 @@ import HomeIcon from './assets/svg/Home';
 import SheetIcon from './assets/svg/Sheet';
 import ContactIcon from './assets/svg/Contact';
 import ProjectIcon from './assets/svg/Project';
+import MenuIcon from './assets/svg/MenuIcon.js';
 
 import Menu from './src/Menu.js';
 import CV from './src/CV.js';
@@ -23,6 +24,7 @@ import Contact from './src/Contact.js';
 import { useState } from 'react';
 import stylesMenu from './styles/stylesMenu';
 import styleHeader from './styles/header.js'
+import Github from './assets/svg/GitHub.js';
 
 const page = {
   Menu: "menu",
@@ -71,7 +73,15 @@ export default function App() {
   function header() {
     return (
       <View style={styleHeader.main}>
-
+        <View style={styleHeader.insideHeader}>
+          <View style={styleHeader.round}/>
+          <Text style={styleHeader.mainText}>Savinien</Text>
+          <TouchableOpacity style={styleHeader.button} onPress={() => { console.log("fefe") }}>
+            <View style={styleHeader.svg}>
+              <MenuIcon />
+            </View>
+          </TouchableOpacity>
+        </View>
       </View>
     )
   }
@@ -79,7 +89,7 @@ export default function App() {
   function content() {
     return (
       <View style={[stylesMenu.main]}>
-          {showContent()}
+        {showContent()}
       </View>
     );
   }
