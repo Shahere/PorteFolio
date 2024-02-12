@@ -15,7 +15,9 @@ export default style = StyleSheet.create({
         backgroundColor: 'transparent',
         display: 'flex',
         flexDirection: 'row',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        elevation: 1,
+        zIndex: 1
     },
     insideHeader: {
         height: "100%",
@@ -24,7 +26,9 @@ export default style = StyleSheet.create({
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-between",
-        alignItems: "center"
+        alignItems: "center",
+        elevation: 1,
+        zIndex: 1
     },
     round: {
         width: '15%',

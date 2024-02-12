@@ -70,7 +70,7 @@ export default class Menu extends React.Component {
                         </View>
                     </TouchableOpacity>
                     <TouchableOpacity
-                        onPress={() => { ctx.openurl(ctx.state.CV)  }}
+                        onPress={() => { ctx.openurl(ctx.state.CV) }}
                         style={style.roundButton1}>
                         <View style={{ width: '100%', height: '100%' }}>
                             <CV />
@@ -101,20 +101,55 @@ export default class Menu extends React.Component {
                 </View>
             );
         }
-
-        return (
-            <ScrollView style={style.scrollView} contentContainerStyle={{}}>
+        function introduce(ctx) {
+            return (
                 <View style={[style.centered, style.mainTitle]}>
                     <Text style={style.title1}>Hello, I'M A</Text>
                     <Text style={style.title1}>Developer</Text>
                 </View>
+            );
+        }
+        function image(ctx) {
+            return (
                 <Image
                     style={style.mainImage}
                     source={require('../assets/hand_computer.png')}
                     resizeMode='contain'
                 />
+            );
+        }
+        function pro(ctx) {
+            return (
+                <View style={style.presentation}>
+                    <View style={style.introView}>
+                        <Text style={style.aboutText}>Professionals skills</Text>
+                    </View>
+                    <View style={style.contentView}>
+                        <Text style={style.contentText}>All my experiences in professional world !</Text>
+                    </View>
+                </View>
+            );
+        }
+        function works() {
+            return (
+                <View style={style.presentation}>
+                    <View style={style.introView}>
+                        <Text style={style.aboutText}>Works</Text>
+                    </View>
+                    <View style={style.contentView}>
+                        <Text style={style.contentText}>Here are some examples of my work !</Text>
+                    </View>
+                </View>
+            );
+        }
+        return (
+            <ScrollView style={style.scrollView} contentContainerStyle={{}}>
+                {introduce(this)}
+                {image(this)}
                 {social(this)}
                 {presentation()}
+                {pro(this)}
+                {works()}
             </ScrollView>
         );
     }
