@@ -34,7 +34,9 @@ export default style = StyleSheet.create({
    },
    mainImage: {
       width: '100%',
-
+   },
+   image70: {
+      width: '70%',
    },
    social: {
       display: 'flex',

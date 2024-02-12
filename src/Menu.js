@@ -126,6 +126,37 @@ export default class Menu extends React.Component {
                     </View>
                     <View style={style.contentView}>
                         <Text style={style.contentText}>All my experiences in professional world !</Text>
+                        <View style={style.centered}>
+                            <Image
+                                style={style.image70}
+                                source={require('../assets/header_logo_apizee.png')}
+                                resizeMode='contain'
+                            />
+                        </View>
+                        <Text style={style.contentText}>My current work at Apizee consist to maintained and develop features for the Javascript library ApiRTC.</Text>
+                        <Text style={style.contentText}>I'm proud to contributing to Apizee. I achieve some internals security features, translate ApiRTC to Flutter and React-Native</Text>
+                        <Text style={style.contentText}>At Apizee, I have progressed in a lot of computer science area, Docker, Kubernetes, network and operating system management...</Text>
+
+
+                        <View style={style.centered}>
+                            <Image
+                                style={style.image70}
+                                source={require('../assets/dirisi.jpeg')}
+                                resizeMode='contain'
+                            />
+                        </View>
+                        <Text style={style.contentText}>For my 1st job in computer science, I was welcomed at the DIRISI's french army branch</Text>
+                        <Text style={style.contentText}>My goal was to develop an Django (Python) web application, monitoring web traffic</Text>
+
+                        <View style={style.centered}>
+                            <Image
+                                style={style.image70}
+                                source={require('../assets/LCC.png')}
+                                resizeMode='contain'
+                            />
+                        </View>
+                        <Text style={style.contentText}>My first job was at the Loguivy nautical club as sailing instructor</Text>
+                        <Text style={style.contentText}>My role was to teach sailing to the youngest</Text>
                     </View>
                 </View>
             );
