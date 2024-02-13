@@ -54,10 +54,20 @@ export default style = StyleSheet.create({
       marginLeft: 10,
       marginRight: 10
    },
-
-
+   largeButton: {
+      width: '70%',
+      height: 50,
+      justifyContent: 'center',
+      alignItems: 'center',
+      borderRadius: 100,
+      backgroundColor: '#ffa86a',
+   },
+   callme: {
+      fontSize: 20,
+      fontWeight: 'bold'
+   },
    presentation: {
-     marginTop: 30 
+      marginTop: 30
    },
    introView: {
       alignItems: 'center'

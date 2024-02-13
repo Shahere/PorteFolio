@@ -165,14 +165,25 @@ export default class Menu extends React.Component {
             return (
                 <View style={style.presentation}>
                     <View style={style.introView}>
-                        <Text style={style.aboutText}>Works</Text>
+                        <Text style={style.aboutText}>Contact me</Text>
                     </View>
-                    <View style={style.contentView}>
-                        <Text style={style.contentText}>Here are some examples of my work !</Text>
+                    <View style={[style.centered, { marginTop: 50, marginBottom: 50 }]}>
+                        <TouchableOpacity
+                            onPress={() => { Linking.openURL('tel:+33637582689'); }}
+                            style={style.largeButton}>
+                            <View>
+                                <Text style={style.callme}>Call me !</Text>
+                            </View>
+                        </TouchableOpacity>
                     </View>
                 </View>
             );
         }
+        /*function phoneCall() {
+            return (
+                
+            );
+        }*/
         return (
             <ScrollView style={style.scrollView} contentContainerStyle={{}}>
                 {introduce(this)}
