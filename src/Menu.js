@@ -169,7 +169,7 @@ export default class Menu extends React.Component {
                     </View>
                     <View style={[style.centered, { marginTop: 50, marginBottom: 50 }]}>
                         <TouchableOpacity
-                            onPress={() => { Linking.openURL('tel:+33637582689'); }}
+                            onPress={() => { Linking.openURL('tel:0637582689'); }}
                             style={style.largeButton}>
                             <View>
                                 <Text style={style.callme}>Call me !</Text>
