@@ -25,7 +25,7 @@ import { useState } from 'react';
 import stylesMenu from './styles/stylesMenu';
 import styleHeader from './styles/header.js'
 import Github from './assets/svg/GitHub.js';
-
+import Sidebar from './src/Sidebar.js';
 const page = {
   Menu: "menu",
   CV: "cv",
@@ -124,11 +124,18 @@ export default function App() {
     }
   }
 
+  function sidebar() {
+    return (
+      <Sidebar/>
+    );
+  }
+
   return (
     <View style={stylesMenu.main}>
       {header()}
       {content()}
       {/*navigationBar()*/}
+      {sidebar()}
     </View>
   );
 
