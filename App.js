@@ -38,6 +38,7 @@ const page = {
 export default function App() {
 
   const [actualPage, setActualPage] = useState(page.Menu);
+  const [isOpen, setisOpen] = useState(false);
 
   function changePage(wantedPage) {
     setActualPage(wantedPage);
@@ -78,7 +79,7 @@ export default function App() {
           <Text style={styleHeader.mainText}>Savinien</Text>
           <TouchableOpacity
             style={styleHeader.button}
-            onPress={() => { console.log("test") }}>
+            onPress={() => { setisOpen(true); console.log("open")}}>
             <View style={styleHeader.svg}>
               <MenuIcon />
             </View>
@@ -125,8 +126,9 @@ export default function App() {
   }
 
   function sidebar() {
+    if(!isOpen) return;
     return (
-      <Sidebar/>
+      <Sidebar closeElement={setisOpen}/>
     );
   }
 

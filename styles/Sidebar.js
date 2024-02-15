@@ -12,7 +12,7 @@ export default style = StyleSheet.create({
         alignItems: 'center',
         flex: 1
     },
-    main: {
+     main: {
         position: "absolute",
         top: 0,
         left: 0,
@@ -22,8 +22,8 @@ export default style = StyleSheet.create({
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'center',
-        elevation: 100,
-        zIndex: 100
+        elevation: 1,
+        zIndex: 1
     },
     insideHeader: {
         height: "100%",
@@ -33,8 +33,8 @@ export default style = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
-        elevation: 1,
-        zIndex: 1
+        elevation: -1,
+        zIndex: -1
     },
     round: {
         width: '15%',
@@ -48,8 +48,7 @@ export default style = StyleSheet.create({
         marginRight: 10
     },
     button: {
-        elevation: 50,
-        zIndex: 50,
+        backgroundColor: 'transparent'
     },
     svg: {
         height: '50%',
