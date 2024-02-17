@@ -37,8 +37,10 @@ export default class Header extends React.Component {
                     <TouchableOpacity
                         style={styleHeader.button}
                         onPress={() => { this.props.openElement(true);}}>
-                        <View style={styleHeader.svg}>
-                            <MenuIcon />
+                        <View style={[styleHeader.svg]}>
+                            <View style={[styleHeader.menubar, styleHeader.menuBar1]}></View>
+                            <View style={[styleHeader.menubar, styleHeader.menuBar2]}></View>
+                            <View style={[styleHeader.menubar, styleHeader.menuBar3]}></View>
                         </View>
                     </TouchableOpacity>
                 </View>

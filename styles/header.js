@@ -48,7 +48,9 @@ export default style = StyleSheet.create({
     svg: {
         height: '50%',
         width: '100%',
-        aspectRatio: 1
+        aspectRatio: 1,
+        display: 'flex',
+        justifyContent: 'space-around'
     },
     mainText: {
         color: '#ffa86a',
@@ -56,4 +58,19 @@ export default style = StyleSheet.create({
         fontWeight: '800',
     },
 
+
+    menubar: {
+        width: '100%',
+        height: '10%',
+        backgroundColor: 'black'
+    },
+    /*menuBar1: {
+        marginTop: 0
+    },
+    menuBar2: {
+        marginTop: "50%"
+    },
+    menuBar3: {
+        marginTop: "100%"
+    },*/
 });
