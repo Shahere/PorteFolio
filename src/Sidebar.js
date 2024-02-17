@@ -36,8 +36,9 @@ export default class Sidebar extends React.Component {
                   <TouchableOpacity
                     style={style.button}
                     onPress={() => { ctx.props.closeElement(false) }}>
-                    <View style={style.svg}>
-                      <Cross />
+                    <View style={[style.svg]}>
+                      <View style={[style.menubar, {transform: [{rotateZ: '45deg'}]}]}></View>
+                      <View style={[style.menubar, {transform: [{rotateZ: '-45deg'}]}]}></View>
                     </View>
                   </TouchableOpacity>
                 </View>

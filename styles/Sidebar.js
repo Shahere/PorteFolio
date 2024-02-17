@@ -53,7 +53,10 @@ export default style = StyleSheet.create({
     svg: {
         height: '50%',
         width: '100%',
-        aspectRatio: 1
+        aspectRatio: 1, 
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
     },
     mainText: {
         color: '#FFF',
@@ -70,5 +73,11 @@ export default style = StyleSheet.create({
         width: '60%', 
         height:'0.5%', 
         backgroundColor: '#FFF'
-    }
+    },
+    menubar: {
+        width: '100%',
+        height: '10%',
+        backgroundColor: 'black', 
+        position: 'absolute'
+    },
 });
