@@ -23,9 +23,9 @@ import Project from './src/Project.js';
 import Contact from './src/Contact.js';
 import { useState } from 'react';
 import stylesMenu from './styles/stylesMenu';
-import styleHeader from './styles/header.js'
 import Github from './assets/svg/GitHub.js';
 import Sidebar from './src/Sidebar.js';
+import Header from './src/Header.js';
 const page = {
   Menu: "menu",
   CV: "cv",
@@ -37,92 +37,18 @@ const page = {
 
 export default function App() {
 
-  const [actualPage, setActualPage] = useState(page.Menu);
   const [isOpen, setisOpen] = useState(false);
 
-  function changePage(wantedPage) {
-    setActualPage(wantedPage);
-  }
-
-  function navigationBar() {
+  function content() {
     return (
-      <View style={navstyle.container}>
-        <TouchableOpacity style={navstyle.button} onPress={() => { changePage(page.Menu) }}>
-          <View style={navstyle.svg}>
-            <HomeIcon />
-          </View>
-        </TouchableOpacity>
-        <TouchableOpacity style={navstyle.button} onPress={() => { changePage(page.CV) }}>
-          <View style={navstyle.svg}>
-            <SheetIcon />
-          </View>
-        </TouchableOpacity>
-        <TouchableOpacity style={navstyle.button} onPress={() => { changePage(page.Project) }}>
-          <View style={navstyle.svg}>
-            <ProjectIcon />
-          </View>
-        </TouchableOpacity>
-        <TouchableOpacity style={navstyle.button} onPress={() => { changePage(page.Contact) }}>
-          <View style={navstyle.svg}>
-            <ContactIcon />
-          </View>
-        </TouchableOpacity>
+      <View style={stylesMenu.main}>
+        <Menu/>
       </View>
     );
   }
 
   function header() {
-    return (
-      <View style={styleHeader.main}>
-        <View style={styleHeader.insideHeader}>
-          <View style={styleHeader.round} />
-          <Text style={styleHeader.mainText}>Savinien</Text>
-          <TouchableOpacity
-            style={styleHeader.button}
-            onPress={() => { setisOpen(true); console.log("open")}}>
-            <View style={styleHeader.svg}>
-              <MenuIcon />
-            </View>
-          </TouchableOpacity>
-        </View>
-      </View>
-    )
-  }
-
-  function content() {
-    return (
-      <View style={[stylesMenu.main]}>
-        {showContent()}
-      </View>
-    );
-  }
-
-  function showContent() {
-    switch (actualPage) {
-      case "menu":
-        return (
-          <Menu />
-        );
-        break;
-      case "cv":
-        return (
-          <CV />
-        );
-        break;
-      case "project":
-        return (
-          <Project />
-        );
-        break;
-      case "contact":
-        return (
-          <Contact />
-        );
-        break;
-      default:
-
-        break;
-    }
+    return (<Header openElement={setisOpen}/>);
   }
 
   function sidebar() {
