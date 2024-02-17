@@ -1,4 +1,3 @@
-import { StatusBar } from 'expo-status-bar';
 import {
   SafeAreaView,
   StyleSheet,
@@ -7,6 +6,7 @@ import {
   TouchableOpacity,
   Platform,
   ScrollView,
+  StatusBar
 } from 'react-native';
 
 import navstyle from './styles/navigationBar';
@@ -38,28 +38,34 @@ const page = {
 export default function App() {
 
   const [isOpen, setisOpen] = useState(false);
+  const [statusBarStyle, setStatusBarStyle] = useState('dark-content');
 
   function content() {
     return (
       <View style={stylesMenu.main}>
-        <Menu/>
+        <Menu />
       </View>
     );
   }
 
   function header() {
-    return (<Header openElement={setisOpen}/>);
+    return (<Header openElement={setisOpen} />);
   }
 
   function sidebar() {
-    if(!isOpen) return;
+    if (!isOpen) return;
     return (
-      <Sidebar closeElement={setisOpen}/>
+      <Sidebar closeElement={setisOpen} />
     );
   }
 
   return (
     <View style={stylesMenu.main}>
+      <StatusBar
+        animated={true}
+        barStyle={statusBarStyle}
+        hidden={false}
+      />
       {header()}
       {content()}
       {/*navigationBar()*/}
