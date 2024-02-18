@@ -107,6 +107,7 @@ export default class Menu extends React.Component {
                 </View>
             );
         }
+
         function introduce(ctx) {
             return (
                 <View ref={ctx.home} style={[style.centered, style.mainTitle]}>
@@ -175,7 +176,7 @@ export default class Menu extends React.Component {
                     </View>
                     <View style={[style.centered, { marginTop: 50, marginBottom: 50 }]}>
                         <TouchableOpacity
-                            onPress={() => { Linking.openURL('tel:0637582689'); }}
+                            onPress={() => { Linking.openURL('tel:+33637582689'); }}
                             style={style.largeButton}>
                             <View>
                                 <Text style={style.callme}>Call me !</Text>
@@ -185,11 +186,18 @@ export default class Menu extends React.Component {
                 </View>
             );
         }
-        /*function phoneCall() {
+        function formation(ctx) {
             return (
-                
+                <View ref={ctx.contact}>
+                    <View style={style.introView}>
+                        <Text style={style.aboutText}>Formations</Text>
+                    </View>
+                    <View style={[style.centered, { marginTop: 50, marginBottom: 50 }]}>
+                        
+                    </View>
+                </View>
             );
-        }*/
+        }
         return (
             <ScrollView ref={this.scrollViewRef} style={style.scrollView} contentContainerStyle={{}}>
                 {introduce(this)}
@@ -197,6 +205,7 @@ export default class Menu extends React.Component {
                 {social(this)}
                 {presentation(this)}
                 {pro(this)}
+                {formation(this)}
                 {works(this)}
             </ScrollView>
         );
