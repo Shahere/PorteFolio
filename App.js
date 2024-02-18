@@ -9,6 +9,8 @@ import {
   StatusBar
 } from 'react-native';
 
+import { useRef } from 'react';
+
 import navstyle from './styles/navigationBar';
 
 import HomeIcon from './assets/svg/Home';
@@ -40,22 +42,30 @@ export default function App() {
   const [isOpen, setisOpen] = useState(false);
   const [statusBarStyle, setStatusBarStyle] = useState('dark-content');
 
+  const home = useRef(null);
+  const ami = useRef(null);
+  const work = useRef(null);
+  const contact = useRef(null);
+  const scrollViewRef = useRef(null)
+
   function content() {
     return (
       <View style={stylesMenu.main}>
-        <Menu />
+        <Menu home={home} ami={ami} work={work} contact={contact} scrollViewRef={scrollViewRef}/>
       </View>
     );
   }
 
   function header() {
-    return (<Header openElement={setisOpen} />);
+    return (
+      <Header openElement={setisOpen} />
+    );
   }
 
   function sidebar() {
     if (!isOpen) return;
     return (
-      <Sidebar closeElement={setisOpen} />
+      <Sidebar closeElement={setisOpen} home={home} ami={ami} work={work} contact={contact} scrollViewRef={scrollViewRef}/>
     );
   }
 
@@ -68,7 +78,6 @@ export default function App() {
       />
       {header()}
       {content()}
-      {/*navigationBar()*/}
       {sidebar()}
     </View>
   );

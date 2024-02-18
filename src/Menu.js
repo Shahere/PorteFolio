@@ -34,6 +34,12 @@ export default class Menu extends React.Component {
     constructor(props) {
         super(props);
         this.state = initialState;
+
+        this.home = this.props.home;
+        this.ami = this.props.ami;
+        this.work = this.props.work;
+        this.contact = this.props.contact;
+        this.scrollViewRef = this.props.scrollViewRef;
     }
 
     componentDidMount() { }
@@ -87,9 +93,9 @@ export default class Menu extends React.Component {
             );
         }
 
-        function presentation() {
+        function presentation(ctx) {
             return (
-                <View style={style.presentation}>
+                <View ref={ctx.ami} style={style.presentation}>
                     <View style={style.introView}>
                         <Text style={style.introduceText}>Let me introduce myself</Text>
                         <Text style={style.aboutText}>About Me</Text>
@@ -103,7 +109,7 @@ export default class Menu extends React.Component {
         }
         function introduce(ctx) {
             return (
-                <View style={[style.centered, style.mainTitle]}>
+                <View ref={ctx.home} style={[style.centered, style.mainTitle]}>
                     <Text style={style.title1}>Hello, I'M A</Text>
                     <Text style={style.title1}>Developer</Text>
                 </View>
@@ -120,7 +126,7 @@ export default class Menu extends React.Component {
         }
         function pro(ctx) {
             return (
-                <View style={style.presentation}>
+                <View ref={ctx.work} style={style.presentation}>
                     <View style={style.introView}>
                         <Text style={style.aboutText}>Professionals skills</Text>
                     </View>
@@ -161,9 +167,9 @@ export default class Menu extends React.Component {
                 </View>
             );
         }
-        function works() {
+        function works(ctx) {
             return (
-                <View style={style.presentation}>
+                <View ref={ctx.contact} style={style.presentation}>
                     <View style={style.introView}>
                         <Text style={style.aboutText}>Contact me</Text>
                     </View>
@@ -185,13 +191,13 @@ export default class Menu extends React.Component {
             );
         }*/
         return (
-            <ScrollView style={style.scrollView} contentContainerStyle={{}}>
+            <ScrollView ref={this.scrollViewRef} style={style.scrollView} contentContainerStyle={{}}>
                 {introduce(this)}
                 {image(this)}
                 {social(this)}
-                {presentation()}
+                {presentation(this)}
                 {pro(this)}
-                {works()}
+                {works(this)}
             </ScrollView>
         );
     }
