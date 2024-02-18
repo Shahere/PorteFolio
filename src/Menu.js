@@ -193,7 +193,12 @@ export default class Menu extends React.Component {
                         <Text style={style.aboutText}>Formations</Text>
                     </View>
                     <View style={[style.centered, { marginTop: 50, marginBottom: 50 }]}>
-                        
+                        <View style={style.centered}>
+                            <Image 
+                                style={{width: '100%'}}
+                                source={require('../assets/Enssat_noir.png')}
+                            />
+                        </View>
                     </View>
                 </View>
             );
