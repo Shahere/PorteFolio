@@ -11,9 +11,13 @@ import {
   TouchableOpacity
 } from 'react-native';
 import style from '../styles/Sidebar'
-import styleHeader from '../styles/header'
+import styleHeaderr from '../styles/header'
+
+const styleHeader = styleHeaderr(true)
+
 import Cross from '../assets/svg/Cross';
 import MenuIcon from '../assets/svg/MenuIcon';
+import Header from './Header';
 
 const initialState = {
 
@@ -87,7 +91,8 @@ export default class Sidebar extends React.Component {
     return (
       <View style={{ elevation: 100, zIndex: 100, width: '100%', height: '100%', backgroundColor: '#ffa86a' }}>
         {content(this)}
-        {header(this)}
+        {/*header(this)*/}
+        <Header openElement={this.props.openElement}/>
       </View>
     );
   }
