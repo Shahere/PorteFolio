@@ -5,7 +5,7 @@ import {
     StyleSheet
 } from 'react-native';
 
-export default style = StyleSheet.create({
+export default style= (isMenuOpen) => StyleSheet.create({
     main: {
         position: "absolute",
         top: 0,
@@ -41,10 +41,6 @@ export default style = StyleSheet.create({
         marginLeft: 10,
         marginRight: 10
     },
-    button: {
-        elevation: 50,
-        zIndex: 50,
-    },
     svg: {
         height: '50%',
         width: '100%',
@@ -59,18 +55,15 @@ export default style = StyleSheet.create({
     },
 
 
+    button: {
+        elevation: 50,
+        zIndex: 50,
+        backgroundColor: 'transparent'
+    },
     menubar: {
         width: '100%',
         height: '10%',
         backgroundColor: 'black'
     },
-    /*menuBar1: {
-        marginTop: 0
-    },
-    menuBar2: {
-        marginTop: "50%"
-    },
-    menuBar3: {
-        marginTop: "100%"
-    },*/
+    
 });

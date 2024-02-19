@@ -11,8 +11,9 @@ import {
     TouchableOpacity
 } from 'react-native';
 
-import styleHeader from '../styles/header.js'
+import styleHeaderr from '../styles/header.js'
 
+const styleHeader = styleHeaderr(false)
 
 import MenuIcon from '../assets/svg/MenuIcon';
 

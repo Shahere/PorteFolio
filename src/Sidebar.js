@@ -11,6 +11,7 @@ import {
   TouchableOpacity
 } from 'react-native';
 import style from '../styles/Sidebar'
+import styleHeader from '../styles/header'
 import Cross from '../assets/svg/Cross';
 import MenuIcon from '../assets/svg/MenuIcon';
 

@@ -15,6 +15,7 @@ import {
 } from 'react-native';
 import style from '../styles/stylesMenu.js'
 
+
 import Github from '../assets/svg/GitHub'
 import Website from '../assets/svg/Website.js';
 import CV from '../assets/svg/CV.js'
@@ -210,7 +211,7 @@ export default class Menu extends React.Component {
                 {social(this)}
                 {presentation(this)}
                 {pro(this)}
-                {formation(this)}
+                {/*formation(this)*/}
                 {works(this)}
             </ScrollView>
         );
