@@ -77,8 +77,8 @@ export default function App() {
         hidden={false}
       />
       {header()}
-      {content()}
-      {sidebar()}
+      {/*content()*/}
+      {/*sidebar()*/}
     </View>
   );
 
