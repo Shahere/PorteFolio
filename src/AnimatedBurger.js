@@ -21,7 +21,7 @@ const initialState = {
     active: False
 };
 
-export default class Header extends React.Component {
+export default class AnimatedBurger extends React.Component {
     constructor(props) {
         super(props);
         this.state = initialState;
