@@ -91,8 +91,7 @@ export default class Sidebar extends React.Component {
     return (
       <View style={{ elevation: 100, zIndex: 100, width: '100%', height: '100%', backgroundColor: '#ffa86a' }}>
         {content(this)}
-        {/*header(this)*/}
-        <Header openElement={this.props.openElement}/>
+        {header(this)}
       </View>
     );
   }
