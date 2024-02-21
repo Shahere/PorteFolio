@@ -17,6 +17,9 @@ const styleHeader = styleHeaderr(false)
 
 import MenuIcon from '../assets/svg/MenuIcon';
 
+import Hamburger from 'react-native-animated-hamburger';
+
+
 const initialState = {
 
 };
@@ -37,11 +40,14 @@ export default class Header extends React.Component {
                     <Text style={styleHeader.mainText}>Savinien</Text>
                     <TouchableOpacity
                         style={styleHeader.button}
-                        onPress={() => { this.props.openElement(true);}}>
+                        onPress={() => { this.props.openElement(true); }}>
                         <View style={[styleHeader.svg]}>
-                            <View style={[styleHeader.menubar, styleHeader.menuBar1]}></View>
+                            {/*<View style={[styleHeader.menubar, styleHeader.menuBar1]}></View>
                             <View style={[styleHeader.menubar, styleHeader.menuBar2]}></View>
-                            <View style={[styleHeader.menubar, styleHeader.menuBar3]}></View>
+                            <View style={[styleHeader.menubar, styleHeader.menuBar3]}></View>*/}
+                            <Hamburger type="cross" active={false}>
+
+                            </Hamburger>
                         </View>
                     </TouchableOpacity>
                 </View>

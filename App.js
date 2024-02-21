@@ -29,6 +29,7 @@ import Github from './assets/svg/GitHub.js';
 import Sidebar from './src/Sidebar.js';
 import Header from './src/Header.js';
 
+
 const page = {
   Menu: "menu",
   CV: "cv",
